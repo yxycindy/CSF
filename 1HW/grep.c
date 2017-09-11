@@ -8,8 +8,9 @@ int main (int argc, char* argv[]) {
 		exit(2);
 	}
 
-	char *key = argv[1];
-	readin(key);
-
-	return (EXIT_SUCCESS);
+	if(readin(argv[1])){
+		return (EXIT_FAILURE);
+	} else {
+		return (EXIT_SUCCESS);
+	}
 }

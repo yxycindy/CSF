@@ -1,4 +1,4 @@
-CFLAGS =-std=c11 -Wall -Wextra -Wpedantic -o2
+CFLAGS =-std=c11 -Wall -g -Wextra -Wpedantic -o2
 
 grep: grep.o lineread.o
 grep.o: grep.c lineread.h
