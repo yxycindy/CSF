@@ -17,6 +17,7 @@ int main (int argc, char* argv[]) {
 			find = 0;
 			printf("%s\n", line);
 		}
+		free(line);
 	}
 
 

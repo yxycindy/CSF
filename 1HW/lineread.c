@@ -9,6 +9,7 @@ char *readin() {
 	int size = 1;
 	str = malloc(sizeof(char) * size);
 	if (str == NULL) { exit(1);}
+
 	while ((ch = fgetc(stdin)) != EOF && ch != '\n') {
 		str[index++] = ch;
 
@@ -24,11 +25,10 @@ char *readin() {
 		}
 	}
 
-	if(str == NULL && ch == EOF) {
-		printf("bla\n");
+	if(index == 0 && ch == EOF) {
+		free(str);
 		return NULL;
 	}
 	str[index++] = '\0';
-	str = realloc(str, sizeof(char) * index); 
-	return str;
+	return realloc(str, sizeof(char) * index);
 }
