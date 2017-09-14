@@ -1,6 +1,6 @@
 #ifndef LINEREAD
 #define LINEREAD
 
-int readin(char *key);
+char *readin();
 
 #endif

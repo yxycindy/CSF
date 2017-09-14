@@ -8,7 +8,19 @@ int main (int argc, char* argv[]) {
 		exit(2);
 	}
 
-	if(readin(argv[1])){
+	char *word = argv[1];
+	char *line;
+	int find = 1;
+
+	while ((line = readin())!= NULL) {
+		if(strstr(line, word) != NULL) {
+			find = 0;
+			printf("%s\n", line);
+		}
+	}
+
+
+	if(find){
 		return (EXIT_FAILURE);
 	} else {
 		return (EXIT_SUCCESS);
